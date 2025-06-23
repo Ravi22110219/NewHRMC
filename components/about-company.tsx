@@ -2,7 +2,7 @@
 
 import { useLanguage } from '@/contexts/language-context'
 import styles from './about-company.module.css'
-import plant from '.././public/Plant2.jpg'
+import plant from '.././public/plant2.jpg'
 
 export default function AboutCompany() {
   const { t } = useLanguage()
