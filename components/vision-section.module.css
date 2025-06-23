@@ -1,0 +1,244 @@
+.visionSection {
+  padding: 2rem 0 5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e67e22;
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.imageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visionImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.visionImage:hover {
+  transform: scale(1.02);
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visionCard,
+.missionCard,
+.valuesCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.visionCard:hover,
+.missionCard:hover,
+.valuesCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cardTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #e67e22;
+  border-radius: 2px;
+}
+
+.visionText,
+.missionText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.valuesList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.value {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #e67e22;
+}
+
+.value h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.value p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.futureGoals {
+  text-align: center;
+}
+
+.goalsTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.goalsTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #e67e22;
+  border-radius: 2px;
+}
+
+.goalsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.goal {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.goal:hover {
+  transform: translateY(-10px);
+}
+
+.goalIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.goal h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.goal p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .visionCard,
+  .missionCard,
+  .valuesCard {
+    padding: 2rem;
+  }
+
+  .goalsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .goalsTitle {
+    font-size: 2rem;
+  }
+
+  .goal {
+    padding: 2rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

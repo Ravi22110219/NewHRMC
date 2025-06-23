@@ -1,0 +1,374 @@
+.teamSection {
+  padding: 2rem 0 5rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #e67e22;
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.foundersSection {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #e67e22;
+  border-radius: 2px;
+}
+
+.foundersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.founderCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.founderCard:hover {
+  transform: translateY(-5px);
+}
+
+.founderContent {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Reverse layout for alternating founders */
+.founderCard.reverse .founderContent {
+  grid-template-columns: 1fr 300px;
+}
+
+.founderCard.reverse .founderImageSection {
+  order: 2;
+}
+
+.founderCard.reverse .founderMessage {
+  order: 1;
+}
+
+.founderImageSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.founderImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 4px solid #e67e22;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.founderCard:hover .founderImage {
+  transform: scale(1.02);
+}
+
+.founderDetails {
+  text-align: center;
+}
+
+.founderName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.founderPosition {
+  font-size: 1rem;
+  color: #e67e22;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #e67e22;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background: #d35400;
+  transform: scale(1.1);
+}
+
+.founderMessage {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+.messageText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  font-style: italic;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.messageText::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 4rem;
+  color: #e67e22;
+  font-family: serif;
+  opacity: 0.3;
+}
+
+.teamMembersSection {
+  margin-top: 3rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.memberCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  cursor: pointer;
+}
+
+.memberCard:hover {
+  transform: translateY(-10px);
+}
+
+.memberImageContainer {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.memberCard:hover .memberImage {
+  transform: scale(1.05);
+}
+
+.memberOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(230, 126, 34, 0.9),
+    rgba(211, 84, 0, 0.9)
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.memberCard:hover .memberOverlay {
+  opacity: 1;
+}
+
+.memberExtraInfo {
+  text-align: center;
+  padding: 1rem;
+}
+
+.memberExperience {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.memberSpeciality {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.memberInfo {
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+}
+
+.memberName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.memberPosition {
+  font-size: 1rem;
+  color: #e67e22;
+  font-weight: 500;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  /* Mobile layout: Photo first, then details, then message */
+  .founderContent,
+  .founderCard.reverse .founderContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .founderCard.reverse .founderImageSection,
+  .founderCard.reverse .founderMessage {
+    order: unset;
+  }
+
+  .founderImageSection {
+    order: 1;
+  }
+
+  .founderMessage {
+    order: 2;
+  }
+
+  .founderImage {
+    width: 200px;
+    height: 240px;
+  }
+
+  .messageText {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .founderCard {
+    padding: 1rem;
+  }
+
+  .founderImage {
+    width: 180px;
+    height: 220px;
+  }
+
+  .foundersContainer {
+    gap: 2.5rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

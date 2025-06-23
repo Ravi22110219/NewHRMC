@@ -1,0 +1,269 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo img {
+  height: 55px; /* Kept increased by 15px from 40px */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #e67e22; /* Back to orange */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e67e22; /* Back to orange */
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.dropdownButton:hover {
+  color: #e67e22; /* Back to orange */
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  animation: fadeInDown 0.3s ease;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f8f9fa;
+  color: #e67e22; /* Back to orange */
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.languageToggle {
+  background: none;
+  border: 1px solid #e67e22; /* Back to orange */
+  color: #e67e22; /* Back to orange */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.languageToggle:hover {
+  background: #e67e22; /* Back to orange */
+  color: white;
+}
+
+.orderButton {
+  background: #e67e22; /* Back to orange */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(230, 126, 34, 0.3); /* Back to orange shadow */
+}
+
+.orderButton:hover {
+  background: #d35400; /* Back to orange hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(230, 126, 34, 0.4); /* Back to orange shadow */
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease;
+}
+
+.mobileNavLink {
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.mobileNavLink:hover {
+  background-color: #f8f9fa;
+  color: #e67e22; /* Back to orange */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .logo img {
+    height: 50px; /* Kept increased by 15px from 35px */
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .mobileNav {
+    display: flex;
+  }
+
+  .rightSection {
+    gap: 0.5rem;
+  }
+
+  .languageToggle {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .orderButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 60px;
+    padding: 0 0.75rem;
+  }
+
+  .logo img {
+    height: 47px; /* Kept increased by 15px from 32px */
+  }
+
+  .languageToggle {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .orderButton {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
