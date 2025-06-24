@@ -25,10 +25,10 @@ export default function AboutCompany() {
             <div className={styles.stats}>
               <div className={styles.stat}>
                 <h3>10+</h3>
-                <p>Years Experience</p>
+                <p>Years Experience Founders</p>
               </div>
               <div className={styles.stat}>
-                <h3>500+</h3>
+                <h3>10+</h3>
                 <p>Projects Completed</p>
               </div>
               <div className={styles.stat}>

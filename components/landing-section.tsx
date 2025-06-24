@@ -22,18 +22,18 @@ export default function LandingSection() {
         <div className={styles.content}>
           <div className={styles.textSection}>
             <h1 className={styles.headline}>
-              Heritage Ready Mix Concrete Plant
+              Heritage ReadyMix Concrete Plant
             </h1>
             <p className={styles.description}>{t('landingDescription')}</p>
           </div>
 
           <div className={styles.imageSection}>
             <div className={styles.animatedGif}>
-              <img
+              {/* <img
                 src="https://www.transconcrete.com/wp-content/themes/transconcrete-2017/images/trucks.gif"
                 alt="Concrete Mixing Animation"
                 className={styles.gif}
-              />
+              /> */}
             </div>
           </div>
         </div>

@@ -3,62 +3,76 @@
 import { Instagram, Mail, Facebook } from 'lucide-react'
 import { useLanguage } from '@/contexts/language-context'
 import styles from './team-section.module.css'
-import santoshPhoto from '.././public/santoshPhoto.jpg'
-import ajamalPhoto from '.././public/ajamalPhoto.jpg'
+import santoshPhoto from '.././public/santosh.jpg'
+import pavanPhoto from '.././public/pavanPhoto.jpg'
+import ashokPhoto from '.././public/ashok2.jpg'
+import siyaramPhoto from '.././public/siyaram.jpg'
 
 const founders = [
   {
     id: 1,
-    name: 'Santosh Kumar',
-    position: 'Founder & CEO',
+    name: 'Ashok Kumawat',
+    position: 'Founder & Director',
     email: 'santosh@heritagereadymix.com',
     instagram: '@rajesh_heritage',
     facebook: 'rajesh.heritage',
-    image: santoshPhoto.src || '/placeholder.svg?height=400&width=400',
+    image: ashokPhoto.src || '/placeholder.svg?height=400&width=400',
     message:
-      "It's a proud privilege for me to welcome you to Heritage Readymix. At Heritage, we take pride in delivering premium quality concrete solutions with innovation and excellence. Our commitment to quality and customer satisfaction drives us to provide the best concrete products in Rajasthan. I invite you to join us in building a stronger future with our reliable and sustainable concrete solutions.",
+      'It is my honor and privilege to welcome you to Heritage Readymix. With over 15 years of hands-on experience in the Ready-Mix Concrete (RMC) industry and an extensive track record of managing and optimizing operations across three major RMC plants, I bring deep knowledge and expertise in plant workflows and concrete solutions.\n\n\
+      At Heritage, we pride ourselves on delivering premium-quality concrete solutions backed by innovation, precision, and a relentless commitment to excellence. Our unwavering dedication to quality and customer satisfaction inspires us to provide the finest concrete products in Rajasthan, ensuring reliability and sustainability in every project we undertake.',
   },
   {
     id: 2,
-    name: 'Ajamal',
-    position: 'Co-Founder & COO',
+    name: 'Siyaram Sharma',
+    position: 'Founder & Director',
     email: 'ajamal@heritagereadymix.com',
     instagram: '@priya_heritage',
     facebook: 'priya.heritage',
-    image: ajamalPhoto.src || '/placeholder.svg?height=400&width=400',
+    image: siyaramPhoto.src || '/placeholder.svg?height=400&width=400',
     message:
       'At Heritage Readymix, we believe in operational excellence and strategic planning. Our focus on efficient delivery and quality control ensures that every project receives the attention it deserves. We are committed to building lasting relationships with our clients through consistent service and innovative solutions that meet the evolving needs of the construction industry.',
   },
   {
     id: 3,
-    name: 'Amit Singh Rathore',
-    position: 'Co-Founder & CTO',
+    name: 'Santosh Kumawat',
+    position: 'Co-Founder & Director',
     email: 'amit@heritagereadymix.com',
-    instagram: '@amit_heritage',
-    facebook: 'amit.heritage',
-    image: '/placeholder.svg?height=400&width=400',
+    instagram: '@santosh_kumar7568',
+    facebook: 'profile.php?id=100005927948791&sk=about',
+    image: santoshPhoto.src || '/placeholder.svg?height=400&width=400',
     message:
       'Technology and quality control are at the heart of our operations. We continuously invest in advanced equipment and testing procedures to ensure that every batch of concrete meets the highest industry standards. Our technical expertise and commitment to innovation help us deliver superior products that exceed customer expectations.',
   },
   {
     id: 4,
-    name: 'Sunita Meena',
-    position: 'Co-Founder & CFO',
+    name: 'Pavan Kumar Sharma',
+    position: 'Co-Founder & Director',
+    email: 'sunita@heritagereadymix.com',
+    instagram: '@sunita_heritage',
+    facebook: 'sunita.heritage',
+    image: pavanPhoto.src || '/placeholder.svg?height=400&width=400',
+    message:
+      'Financial stability and business growth go hand in hand with quality service. At Heritage Readymix, we maintain transparent business practices while driving sustainable growth. Our focus on customer satisfaction and operational efficiency ensures that we continue to be the preferred choice for concrete solutions in the region.',
+  },
+  {
+    id: 5,
+    name: 'Ajamal Khan',
+    position: 'Co-Founder & Director',
     email: 'sunita@heritagereadymix.com',
     instagram: '@sunita_heritage',
     facebook: 'sunita.heritage',
     image: '/placeholder.svg?height=400&width=400',
     message:
-      'Financial stability and business growth go hand in hand with quality service. At Heritage Readymix, we maintain transparent business practices while driving sustainable growth. Our focus on customer satisfaction and operational efficiency ensures that we continue to be the preferred choice for concrete solutions in the region.',
+      ' I warmly welcome you to Heritage Readymix. Leveraging my experience and proficiency in marketing and strategic growth, I have ensured that Heritage Readymix remains a trusted name in the industry. At Heritage, we prioritize financial stability and sustainable business growth alongside delivering premium-quality concrete solutions. Transparent business practices, customer satisfaction, and operational efficiency are the cornerstones of our success, making us the preferred choice for concrete solutions in the region. Let’s build a stronger, more sustainable future together.',
   },
 ]
 
 const teamMembers = [
   {
     id: 5,
-    name: 'Vikram Singh',
-    position: 'Site Supervisor',
-    experience: '8+ Years Experience',
+    name: 'Narsi Kumawat',
+    position: 'Lab oratory Manager',
+    experience: '2+ Years Experience',
     speciality: 'Construction Management',
     image: '/placeholder.svg?height=300&width=300',
   },
@@ -72,7 +86,7 @@ const teamMembers = [
   },
   {
     id: 7,
-    name: 'Dr. Anjali Sharma',
+    name: 'Pavan Sharma',
     position: 'Quality Control Engineer',
     experience: '6+ Years Experience',
     speciality: 'Concrete Testing & Analysis',
@@ -88,10 +102,10 @@ const teamMembers = [
   },
   {
     id: 9,
-    name: 'Kavita Jain',
-    position: 'Customer Relations Manager',
+    name: 'Mukesh Singh',
+    position: 'Driver',
     experience: '5+ Years Experience',
-    speciality: 'Client Relationship Management',
+    speciality: 'Concrete Transportation',
     image: '/placeholder.svg?height=300&width=300',
   },
   {

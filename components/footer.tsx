@@ -29,7 +29,7 @@ export default function Footer() {
             <h3 className={styles.companyName}>{t('companyName')}</h3>
             <div className={styles.address}>
               <MapPin size={16} />
-              <span>Near Mahima Kopal, Goner Road, Jagatpura, Jaipur</span>
+              <span>Near Bombay Hospital, Goner Road, Jagatpura, Jaipur</span>
             </div>
             <div className={styles.contact}>
               <Phone size={16} />

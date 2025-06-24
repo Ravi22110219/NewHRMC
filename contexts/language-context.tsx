@@ -25,7 +25,7 @@ const translations = {
     orderNow: 'Order Now',
 
     // Landing Section
-    landingHeadline: 'Premium Ready Mix Concrete Solutions',
+    landingHeadline: 'Premium ReadyMix Concrete Solutions',
     landingDescription:
       'Heritage Readymix Jaipur - Your trusted partner for high-quality concrete solutions across Rajasthan. We deliver excellence in every mix.',
 

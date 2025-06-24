@@ -76,7 +76,7 @@ export default function ContactSection() {
               </div>
               <div className={styles.infoContent}>
                 <h3>Address</h3>
-                <p>Near Mahima Kopal, Goner Road, Jagatpura</p>
+                <p>Near Bombay Hospital, Goner Road, Jagatpura</p>
                 <p>Jaipur, Rajasthan 302001</p>
                 <p>India</p>
               </div>
